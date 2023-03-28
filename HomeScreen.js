@@ -1,17 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, Button, View } from 'react-native';
 
+
 export  function HomeScreen({ navigation }) {
     return (
         <View style={styles.container}>
   
-        <Text>FDM Wellbeing</Text>
+        <Text style={styles.Text}>FDM Wellbeing</Text>
+
+        
  
-        <Button 
+        <Button style={styles.button1} 
           title='Fitness'
           onPress={() => navigation.navigate("Fitness")}
         />
-        <Button 
+        <Button style={styles.button2} 
           title='Mind'
           onPress={() => navigation.navigate("Mind")}
         />
@@ -23,12 +26,32 @@ export  function HomeScreen({ navigation }) {
     );
     
   }
-  
+
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
+      backgroundColor: 'lightblue',
       alignItems: 'center',
       justifyContent: 'center',
     },
+    Text: {
+      flex: 1,
+      marginTop: 16,
+      textAlign: 'center',
+      fontSize: 30,
+    },
+
+    
+
+    button1: {
+      flex: 1,
+      marginTop: 30,
+
+    },
+
+    button2: {
+
+    }
+
+   
   });

@@ -6,12 +6,14 @@ import Mind from "./Mind";
 import { HomeScreen } from "./HomeScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Tabs from "./Tabs";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>  
+      <Tabs></Tabs>
       <Stack.Navigator>
         <Stack.Screen 
           name="Base"
@@ -25,6 +27,7 @@ export default function App() {
         <Stack.Screen 
           name="HomeScreen"
           component={HomeScreen}
+          options={{title: ""}}
         />
         <Stack.Screen 
           name="Signup"
