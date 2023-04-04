@@ -4,15 +4,20 @@ import { StyleSheet, Text, Button, View } from 'react-native';
 export default function PreScreen({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text>FDM Wellbeing</Text>
-      <Button 
-        title="Login"
-        onPress={() => navigation.navigate("Login")}
-      />
-       <Button 
-        title="Signup"
-        onPress={() => navigation.navigate("Signup")}
-      />
+      <View style={styles.buttonsWrapper}>
+        <View style={styles.buttonContainer}>
+          <Button 
+            title="Login"
+            onPress={() => navigation.navigate("Login")}
+          />
+        </View>
+        <View style={styles.buttonContainer}>
+          <Button 
+            title="Signup"
+            onPress={() => navigation.navigate("Signup")}
+          />
+        </View>
+      </View>
 
       <StatusBar style="auto" />
     </View>
@@ -22,8 +27,15 @@ export default function PreScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#FFA500',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  buttonsWrapper: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  buttonContainer: {
+    marginBottom: 16, // adjust this value as needed
   },
 });

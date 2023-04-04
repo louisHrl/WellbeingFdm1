@@ -14,14 +14,21 @@ export default function Login({ navigation, route }) {
       <TextInput style={styles.input}
       />
 
-      <Button 
-        title='Login'
-        onPress={() => navigation.navigate("HomeScreen")}
-      />
-      <Button 
-        title='Go to Signup'
-        onPress={() => navigation.navigate("Signup")}
-      />
+      <View style={{ marginVertical: 32 }}>
+        <Button 
+          title='Login'
+          onPress={() => navigation.navigate("HomeScreen")}
+        />
+      </View>
+
+      <View style={{ marginVertical: 32 }}>
+        <Button 
+          title='Go to Signup'
+          onPress={() => navigation.navigate("Signup")}
+          style={{ width: 100 }} // add this style to set the width of the button
+        />
+      </View>
+
       <StatusBar style="auto" />
     </View>
   );
@@ -30,7 +37,7 @@ export default function Login({ navigation, route }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#FFA500',
     alignItems: 'center',
     justifyContent: 'center',
   },
