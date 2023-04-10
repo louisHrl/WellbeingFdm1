@@ -8,6 +8,7 @@ import WorkoutTracker from './WorkoutTracker';
 import Mind from "./Mind";
 import SleepTracking from './SleepTracking';
 import Meditations from './Meditations';
+import Consult from './Consult';
 import { HomeScreen } from "./HomeScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -48,6 +49,7 @@ export default function App() {
         <Stack.Screen name="Mind" component={Mind} />
         <Stack.Screen name="SleepTracking" component={SleepTracking} options={{ title: 'Sleep Tracking' }} />
         <Stack.Screen name="Meditations" component={Meditations} />
+        <Stack.Screen name="Consult" component={Consult} />
       </Stack.Navigator>
     </NavigationContainer>
   );
